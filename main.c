@@ -7,7 +7,7 @@ int main(void) {
     global_var();
     global_var();
     global_var();
-
+    
     printf("static vars\n");
     static_var();
     static_var();

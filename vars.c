@@ -16,7 +16,7 @@ void vars(void) {
     printf("%d\n", c);
 
     // declare but init later,
-    // garabge till init'ed
+    // garbage till init'ed
     int d, e, f;
     // printf("%d\n", f); var not init (rand val)
     e = 1;

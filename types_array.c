@@ -3,7 +3,6 @@
 
 
 void array(void) {
-
 	// ================== ARRAYS ==================
 	// arrays are a list of consecutive items
 	//
@@ -14,10 +13,9 @@ void array(void) {
 }
 
 void strings(void) {
-
 	// ================== CHARS ==================
 	// char are numbers (char = byte) but we can put ASCII
- 	// symbols (gets saved into var as related numeric code)
+	// symbols (gets saved into var as related numeric code)
 	// note: char max is 127, so all ASCII can be contained
 	char c = 'a';
 	printf("%c - %d - should be '%c'\n", c, c, 'a');
@@ -26,7 +24,7 @@ void strings(void) {
 
 	// ================== STRINGS ==================
 	// strings in C are arrays of type (signed )char, terminated
-    // with 0 (NULL TERMINATOR). Needed because these are raw
+	// with 0 (NULL TERMINATOR). Needed because these are raw
 	// strings, so they need a 'end signal'
 	char str[6] = {'h', 'e', 'l', 'l', 'o', 0};
 	printf("str = %s\n", str);
@@ -60,6 +58,5 @@ void strings(void) {
 	str_6[3] = 66;
 	str_6[4]++;
 	printf("str_6 = %s\n", str_6);
-
 }
 

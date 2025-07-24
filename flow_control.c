@@ -1,17 +1,17 @@
 #include <stdio.h>
 #include "header.h"
 
-
 void flow(void) {
     // ================== BLOCKS ==================
     // block can be introduced anywhere, and vars have
     // lexical scope
-    int j = 4; {
+    int j = 4;
+    {
         int j = 2;
         printf("inside block %d at pos: %p\n", j, &j);
     }
-
     printf("inside block %d at pos: %p\n", j, &j);
+
 
     // ================== IF ==================
     // same as other programming languages, else
@@ -24,13 +24,11 @@ void flow(void) {
         printf("i is >= than 3\n");
     }
 
-
     // blocks can be single statements with no braces
     if (i < 3)
         printf("i is < than 3\n");
     else
         printf("i is >= than 3\n");
-
 
     if (i < 3) printf("i is < than 3\n");
     else printf("i is >= than 3\n");
@@ -41,12 +39,14 @@ void flow(void) {
         printf("inside for %d\n", i);
     }
 
+
     // ================== WHILE/ DO WHILE ==================
     int f = 0;
     while (f < 10) {
         printf("inside while, i = %d\n", i);
         f++;
     }
+
 
     // ================== GOTO ==================
     // goto is a statement that jumps code execution
@@ -64,11 +64,13 @@ again:
     // if + goto can be used as building blocks
     // to build any other iteration construct
     k = 0;
-    loop:
+loop:
     if (!(k < 10)) goto next;
-        printf("loop %d\n", k);
-        k++;
-        goto loop;
-    next:
+    printf("loop %d\n", k);
+    k++;
+    goto loop;
+next:
+
+
 
 }

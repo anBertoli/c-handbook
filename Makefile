@@ -13,3 +13,15 @@ build:
 .PHONY: run
 run: build
 	./bin/main
+
+
+.PHONY: build-life
+build-life:
+	mkdir -p ./bin
+	rm -f ./bin/life
+	cc -W -Wall -o bin/life \
+		projects/conway_game_life/main.c
+
+.PHONY: run-life
+run-life: build-life
+	./bin/life
