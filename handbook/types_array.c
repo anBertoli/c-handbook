@@ -1,16 +1,62 @@
 #include <stdio.h>
 #include "header.h"
 
+// when a function receives an array as a parameter, you can use
+// both [] and * notations - they are equivalent. The compiler treats
+// them identically (however it may be more readable to use [])
+void print_array(int arr[], int size) {
+	for (int i = 0; i < size; i++) {
+		printf("%d ", arr[i]);
+	}
+}
+
+void print_array_2(int* arr, int size) {
+	for (int i = 0; i < size; i++) {
+		printf("%d ", arr[i]);
+	}
+}
 
 void array(void) {
 	// ================== ARRAYS ==================
 	// arrays are a list of consecutive items
-	//
 	int a[5] = {1, 2, 3, 4, 5};
 	for (int i = 0; i < 5; i++) {
 		printf("a[%d] = %d\n", i, a[i]);
 	}
+
+	// compiler infers length automatically
+	int b[] = {1, 2, 3, 4, 5};
+	for (int i = 0; i < 5; i++) {
+		printf("b[%d] = %d\n", i, b[i]);
+	}
+
+	// partial initialization (unspecified elements are 0)
+	int c[5] = {10, 20}; // {10, 20, 0, 0, 0}
+	for (int i = 0; i < 5; i++) {
+		printf("c[%d] = %d\n", i, c[i]);
+	}
+
+	// array name represents the address of the first element
+	int d[5] = {10, 20, 30, 40, 50};
+	int* ptr = d; // == &d[0]
+
+	printf("%d\n", *ptr);                    // prints 10
+	printf("%d\n", *(ptr + 1));              // prints 20
+	printf("%d = %d\n", ptr[2], *(ptr + 2)); // prints 30
+
+	// when you pass an array to a function, you're actually
+	// passing a pointer to the first element
+	print_array(d, 5);
+
+
+	// ================== LIMITATIONS ==================
+	// - fixed size: once declared, you cannot change the array size (they are not vectors)
+	// - bounds checking: C doesn't automatically check if you access beyond array limits
+	// - no size information: functions don't automatically know how large a passed array is
+	//
+	// in general, they require careful attention to memory management and bounds checking.
 }
+
 
 void strings(void) {
 	// ================== CHARS ==================

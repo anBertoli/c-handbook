@@ -4,11 +4,12 @@ build:
 	rm -rf ./bin
 	mkdir -p ./bin
 	cc -W -Wall -o bin/main \
-		main.c \
-		vars.c \
-		types_base.c \
-		types_array.c \
-		flow_control.c
+		handbook/main.c \
+		handbook/vars.c \
+		handbook/flow_control.c \
+		handbook/types_base.c \
+		handbook/types_array.c \
+		handbook/pointers.c
 
 .PHONY: run
 run: build

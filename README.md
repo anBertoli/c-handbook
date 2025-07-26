@@ -1,3 +1,1 @@
-
-
-BOOKMARK: finita lezione 6
+BOOKMARK: finita lezione 9

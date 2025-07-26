@@ -41,11 +41,25 @@ void flow(void) {
 
 
     // ================== WHILE/ DO WHILE ==================
+    // the condition is checked before executing the block,
+    // if the condition is initially false, the block is never
+    // executed. The loop continues as long as the condition is true
     int f = 0;
     while (f < 10) {
         printf("inside while, i = %d\n", i);
         f++;
     }
+
+    // the block is executed before checking the condition,
+    // guarantees that the block is executed at least once.
+    // The condition is checked at the end.
+
+    // Do-while is less common but useful in specific situations
+    // where you need to guarantee at least one execution
+    do {
+        printf("inside while, i = %d\n", i);
+        f++;
+    } while (f < 10);
 
 
     // ================== GOTO ==================
@@ -71,6 +85,5 @@ loop:
     goto loop;
 next:
 
-
-
+    printf("");
 }
