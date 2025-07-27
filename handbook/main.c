@@ -25,12 +25,15 @@ int main(void) {
     // num_types();
     // casting();
 
-    // strings();
-    // array();
-
     // flow();
+
+    print_title("ARRAYS");
+    // strings();
+    array();
+
 
     print_title("POINTERS");
     pointers();
+    ptr_arithmetic();
     return 0;
 }

@@ -8,9 +8,10 @@ void print_array(int arr[], int size) {
 	for (int i = 0; i < size; i++) {
 		printf("%d ", arr[i]);
 	}
+	printf("\n");
 }
 
-void print_array_2(int* arr, int size) {
+void print_array_2(int *arr, int size) {
 	for (int i = 0; i < size; i++) {
 		printf("%d ", arr[i]);
 	}
@@ -36,12 +37,14 @@ void array(void) {
 		printf("c[%d] = %d\n", i, c[i]);
 	}
 
-	// array name represents the address of the first element
+	// array name represents the address of the first element,
+	// note the equivalence between array indexing and pointer
+	// arithmetic (see that part)
 	int d[5] = {10, 20, 30, 40, 50};
-	int* ptr = d; // == &d[0]
+	int *ptr = d; // == &d[0]
 
-	printf("%d\n", *ptr);                    // prints 10
-	printf("%d\n", *(ptr + 1));              // prints 20
+	printf("%d = %d\n", ptr[0], *ptr);       // prints 10
+	printf("%d = %d\n", ptr[1], *(ptr + 1)); // prints 20
 	printf("%d = %d\n", ptr[2], *(ptr + 2)); // prints 30
 
 	// when you pass an array to a function, you're actually

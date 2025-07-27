@@ -21,5 +21,6 @@ void flow(void);
 
 // pointers.c
 void pointers(void);
+void ptr_arithmetic(void);
 
 #endif
