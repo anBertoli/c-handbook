@@ -2,6 +2,10 @@
 #ifndef H_H
 #define H_H
 
+
+// main.c
+void print_title(char title[]);
+
 // vars.c
 int sum(int a, int b);
 void vars(void);
@@ -22,5 +26,8 @@ void flow(void);
 // pointers.c
 void pointers(void);
 void ptr_arithmetic(void);
+
+// allocation.c
+void allocation(void);
 
 #endif

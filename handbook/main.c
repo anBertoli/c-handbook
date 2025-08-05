@@ -1,12 +1,6 @@
 #include <stdio.h>
 #include "header.h"
 
-void print_title(char title[]) {
-    printf("========================================= \n");
-    printf("%s\n", title);
-    printf("========================================= \n");
-}
-
 
 int main(void) {
     // printf("global vars\n");
@@ -36,4 +30,11 @@ int main(void) {
     pointers();
     ptr_arithmetic();
     return 0;
+}
+
+
+void print_title(char title[]) {
+    printf("========================================= \n");
+    printf("============= %s =============\n", title);
+    printf("========================================= \n");
 }

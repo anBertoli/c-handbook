@@ -9,7 +9,8 @@ build:
 		handbook/flow_control.c \
 		handbook/types_base.c \
 		handbook/types_array.c \
-		handbook/pointers.c
+		handbook/pointers.c \
+		handbook/alloc.c
 
 .PHONY: run
 run: build

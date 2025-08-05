@@ -32,6 +32,7 @@ void ptr_arithmetic(void) {
     // arithmetic operations can be performed on pointers
     int arr[] = {10, 20, 30, 40, 50};
     int *ptr_arr = arr;
+    printf("arr[0] = %d = %d (%p)\n", arr[0], ptr_arr[0], ptr_arr);
 
     // we can increase the pointer, note that +n is
     // treated as = ptr + n*sizeof(*ptr), or in other
@@ -43,7 +44,7 @@ void ptr_arithmetic(void) {
     ptr_arr--;    // ptr now points to third element (30)  --> *ptr_arr == ptr_arr[2]
 
     // note that pointer add/sub works similarly to array
-    // indexing, namely: the operation 'ptr+n' is equivalent
+    // indexing, meaning: the operation 'ptr+n' is equivalent
     // to ptr[n], both will jump the position
     //   - ptr + n*sizeof(*ptr)
     //
