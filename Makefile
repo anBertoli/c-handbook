@@ -15,7 +15,14 @@ build:
 run: build
 	./bin/main
 
+.PHONY: push
+push:
+	git add .
+	git commit -m "update"
+	git push
 
+
+################ toy projects
 .PHONY: build-life
 build-life:
 	mkdir -p ./bin
